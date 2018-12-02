@@ -12,21 +12,23 @@ Enter project root directory and run the command below:
 
 * **URL**
 
-  <_http://localhost:8000/api/cats/black_>
+  http://localhost:8000/api/cats/black
 
 * **Method:**
-  
-  <_The request type_>
 
   `GET`
   
 *  **URL Params**
 
-   <_limit_> 
+   limit
 
    **Required:**
  
    `tag=[string]`
+   
+   **Optional:**
+ 
+   `limit=[int]`
 
 * **Success Response:**
   
