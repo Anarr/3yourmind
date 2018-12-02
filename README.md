@@ -8,8 +8,20 @@ Enter project root directory and run the command below:
 
 # Api doc
 
-# Retrieve cats list by tag
+<b>Retrieve cats list by tag</b>
   - http://localhost:8000/api/cats/:tag/
 
-# Retrieve available categories
+<b>Retrieve available categories</b>
   - http://localhost:8000/api/categories/
+
+
+/**
+ * @api {get} /user/:id Request User information
+ * @apiName GetUser
+ * @apiGroup User
+ *
+ * @apiParam {Number} id Users unique ID.
+ *
+ * @apiSuccess {String} firstname Firstname of the User.
+ * @apiSuccess {String} lastname  Lastname of the User.
+ */
