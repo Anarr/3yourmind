@@ -2,6 +2,7 @@ from django.test import TestCase
 from django.test import Client
 from django.urls import reverse
 import json
+from .services import CatService
 # Create your tests here.
 
 
@@ -26,3 +27,21 @@ class CatApiIndexViews(TestCase):
 
         self.assertEqual(content['code'], 200)
         self.assertEqual(response.status_code, 200)
+
+
+class CatServiceTest(TestCase):
+    def setUp(self):
+        self.cat = CatService()
+        self.tag = 'hats'
+        self.limit = 2
+
+    """
+    test external catapi response
+    """
+    def test_get_cats(self):
+        cats = self.cat.get_cats(self.tag, self.limit)
+        self.assertEqual(self.limit, len(cats)) 
+
+    def test_get_categories(self):
+        categories = self.cat.get_categories()
+        self.assertEqual(5, len(categories))
