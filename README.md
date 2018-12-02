@@ -56,3 +56,10 @@ Enter project root directory and run the command below:
 
   * **Code:** 200 <br />
     **Content:** `data: [{ id : 1, name: 'boxes' },{ id : 2, name: 'hats' }]`
+    
+
+<b>Run tests</b>
+  - docker-compose run web python manage.py test
+
+
+
