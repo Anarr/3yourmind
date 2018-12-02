@@ -5,7 +5,7 @@ def output(data, code=200):
     
     return {
         'code': code,
-        'data': modify_api_result(data)
+        'data': data
     }
 
 def modify_api_result(data):

@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from .services import *
 from django.conf import settings
-from .utils import output
+from .utils import output, modify_api_result
 # Create your views here.
 
 def index(request, tag = None):
@@ -19,7 +19,7 @@ def index(request, tag = None):
     limit = request.GET.get('limit') or settings.LIMIT
     cats = CatService()
     data = cats.get_cats(tag, limit)
-    result = output(data)
+    result = output(modify_api_result(data))
     return JsonResponse(result, safe=False)
 
 def categories(request):
