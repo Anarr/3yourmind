@@ -31,11 +31,28 @@ Enter project root directory and run the command below:
    `limit=[int]`
 
 * **Success Response:**
-  
-  <_What should the status code be on success and is there any returned data? This is useful when people need to to know what their callbacks should expect!_>
 
   * **Code:** 200 <br />
     **Content:** `data: [{ id : 1, url: 'https://cdn2.thecatapi.com/images/83r.gif' }]`
 
 <b>Retrieve available categories</b>
-  - http://localhost:8000/api/categories/
+* **URL**
+
+  http://localhost:8000/api/categories
+
+* **Method:**
+
+  `GET`
+  
+*  **URL Params**
+
+   limit
+   
+   **Optional:**
+ 
+   `limit=[int]`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** `data: [{ id : 1, name: 'boxes' },{ id : 2, name: 'hats' }]`
